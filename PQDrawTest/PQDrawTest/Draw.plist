@@ -56,9 +56,9 @@
 		<array>
 			<dict>
 				<key>name</key>
-				<string>划线</string>
+				<string>使用图形上下文</string>
 				<key>controller</key>
-				<string>DrawLineViewcontroller</string>
+				<string>ImageContextViewcontroller</string>
 			</dict>
 			<dict>
 				<key>name</key>

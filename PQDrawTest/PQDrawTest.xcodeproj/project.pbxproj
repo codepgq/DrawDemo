@@ -36,6 +36,8 @@
 		8181486D1D5EF4A400346206 /* DrawDownloadViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181486C1D5EF4A400346206 /* DrawDownloadViewcontroller.m */; };
 		818148701D5EF50800346206 /* DrawDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8181486F1D5EF50800346206 /* DrawDownloadView.m */; };
 		818148731D5EF51700346206 /* DrawLineColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148721D5EF51700346206 /* DrawLineColorView.m */; };
+		818148761D5F272100346206 /* ImageContextViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148751D5F272100346206 /* ImageContextViewcontroller.m */; };
+		818148791D5F273900346206 /* UIImage+PQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148781D5F273900346206 /* UIImage+PQImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,10 @@
 		8181486F1D5EF50800346206 /* DrawDownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawDownloadView.m; sourceTree = "<group>"; };
 		818148711D5EF51700346206 /* DrawLineColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLineColorView.h; sourceTree = "<group>"; };
 		818148721D5EF51700346206 /* DrawLineColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLineColorView.m; sourceTree = "<group>"; };
+		818148741D5F272100346206 /* ImageContextViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContextViewcontroller.h; sourceTree = "<group>"; };
+		818148751D5F272100346206 /* ImageContextViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContextViewcontroller.m; sourceTree = "<group>"; };
+		818148771D5F273900346206 /* UIImage+PQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PQImage.h"; sourceTree = "<group>"; };
+		818148781D5F273900346206 /* UIImage+PQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PQImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +249,10 @@
 		818148321D5EAF3000346206 /* ImageContext */ = {
 			isa = PBXGroup;
 			children = (
+				818148741D5F272100346206 /* ImageContextViewcontroller.h */,
+				818148751D5F272100346206 /* ImageContextViewcontroller.m */,
+				818148771D5F273900346206 /* UIImage+PQImage.h */,
+				818148781D5F273900346206 /* UIImage+PQImage.m */,
 			);
 			name = ImageContext;
 			sourceTree = "<group>";
@@ -431,7 +441,9 @@
 			files = (
 				8181486D1D5EF4A400346206 /* DrawDownloadViewcontroller.m in Sources */,
 				818147FF1D5EAC5E00346206 /* ViewController.m in Sources */,
+				818148761D5F272100346206 /* ImageContextViewcontroller.m in Sources */,
 				8181482E1D5EACB900346206 /* PQTBDataSource.m in Sources */,
+				818148791D5F273900346206 /* UIImage+PQImage.m in Sources */,
 				818148701D5EF50800346206 /* DrawDownloadView.m in Sources */,
 				818148411D5EAFAA00346206 /* DrawImageViewcontroller.m in Sources */,
 				818148551D5EB0C600346206 /* DrawTexttView.m in Sources */,
