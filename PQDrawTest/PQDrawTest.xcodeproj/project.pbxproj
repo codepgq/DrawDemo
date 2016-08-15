@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60FB92601D61E94600CBAFDD /* PQWipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FB925F1D61E94600CBAFDD /* PQWipeView.m */; };
+		60FB92621D61E9FD00CBAFDD /* PQWipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FB92611D61E9FD00CBAFDD /* PQWipeView.xib */; };
 		813E6A691D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A681D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m */; };
 		813E6A6C1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A6B1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m */; };
 		813E6A6F1D6150200032C575 /* ImageClipCircleViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A6E1D6150200032C575 /* ImageClipCircleViewcontroller.m */; };
@@ -49,7 +51,6 @@
 		81FD2D0C1D619F060081C061 /* ImageClipRectImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */; };
 		81FD2D0F1D61A0D80081C061 /* PQClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0E1D61A0D80081C061 /* PQClipView.m */; };
 		81FD2D131D61AD770081C061 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D121D61AD770081C061 /* 16.png */; };
-		81FD2D151D61B0AC0081C061 /* PQClipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D141D61B0AC0081C061 /* PQClipView.xib */; };
 		81FD2D171D61B2240081C061 /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D161D61B2240081C061 /* jiantou.png */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60FB925E1D61E94600CBAFDD /* PQWipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQWipeView.h; sourceTree = "<group>"; };
+		60FB925F1D61E94600CBAFDD /* PQWipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQWipeView.m; sourceTree = "<group>"; };
+		60FB92611D61E9FD00CBAFDD /* PQWipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQWipeView.xib; sourceTree = "<group>"; };
 		813E6A671D614FAB0032C575 /* ImageAddWaterImageViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddWaterImageViewcontroller.h; sourceTree = "<group>"; };
 		813E6A681D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAddWaterImageViewcontroller.m; sourceTree = "<group>"; };
 		813E6A6A1D614FE60032C575 /* ImageAddWaterTextViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddWaterTextViewcontroller.h; sourceTree = "<group>"; };
@@ -150,7 +154,6 @@
 		81FD2D0D1D61A0D80081C061 /* PQClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQClipView.h; sourceTree = "<group>"; };
 		81FD2D0E1D61A0D80081C061 /* PQClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQClipView.m; sourceTree = "<group>"; };
 		81FD2D121D61AD770081C061 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
-		81FD2D141D61B0AC0081C061 /* PQClipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQClipView.xib; sourceTree = "<group>"; };
 		81FD2D161D61B2240081C061 /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,7 +310,9 @@
 				81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */,
 				81FD2D0D1D61A0D80081C061 /* PQClipView.h */,
 				81FD2D0E1D61A0D80081C061 /* PQClipView.m */,
-				81FD2D141D61B0AC0081C061 /* PQClipView.xib */,
+				60FB925E1D61E94600CBAFDD /* PQWipeView.h */,
+				60FB925F1D61E94600CBAFDD /* PQWipeView.m */,
+				60FB92611D61E9FD00CBAFDD /* PQWipeView.xib */,
 			);
 			name = ImageContext;
 			sourceTree = "<group>";
@@ -469,12 +474,12 @@
 				81F45D241D61717600090568 /* fore.jpg in Resources */,
 				81FD2D171D61B2240081C061 /* jiantou.png in Resources */,
 				818148071D5EAC5E00346206 /* LaunchScreen.storyboard in Resources */,
+				60FB92621D61E9FD00CBAFDD /* PQWipeView.xib in Resources */,
 				818148671D5EF25700346206 /* 222.png in Resources */,
 				818148041D5EAC5E00346206 /* Assets.xcassets in Resources */,
 				818148301D5EACE100346206 /* Draw.plist in Resources */,
 				81F45D261D61729500090568 /* back.jpg in Resources */,
 				818148021D5EAC5E00346206 /* Main.storyboard in Resources */,
-				81FD2D151D61B0AC0081C061 /* PQClipView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +532,7 @@
 				8181483E1D5EAF9A00346206 /* DrawTextViewcontroller.m in Sources */,
 				8181484F1D5EB0B200346206 /* DrawRectView.m in Sources */,
 				818147FC1D5EAC5E00346206 /* AppDelegate.m in Sources */,
+				60FB92601D61E94600CBAFDD /* PQWipeView.m in Sources */,
 				818147F91D5EAC5E00346206 /* main.m in Sources */,
 				8181486A1D5EF49000346206 /* DrawLineColorViewcontroller.m in Sources */,
 				818148611D5EB34A00346206 /* SectionModel.m in Sources */,
@@ -674,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PQDrawTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pq.PQDrawTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -685,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PQDrawTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pq.PQDrawTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

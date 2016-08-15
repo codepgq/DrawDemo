@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+PQImage.h"
-
+#import "PQWipeView.h"
 @implementation UIImage (PQImage)
 
 + (UIImage *)pq_drawImageWithImageNamed:(NSString *)name{
@@ -130,13 +130,20 @@
     block(newImage,data);
 }
 
-+ (void)pq_cutScreenWithView:(nullable UIView *)view cutFrame:(CGRect)frame successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block{
++ (void)pq_cutScreenWithView:(UIView *)view cutFrame:(CGRect)frame successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block{
+    
+    for (PQWipeView * wipe in view.subviews) {
+        [wipe setHidden:YES];
+    }
+    
     //1.开启上下文
-    UIGraphicsBeginImageContext(frame.size);
+    UIGraphicsBeginImageContext(view.frame.size);
     //2、获取当前的上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     //3、添加裁剪区域 因为一开始view+了64所以这里有要减去
-    CGContextClipToRect(ctx, CGRectMake(frame.origin.x, frame.origin.y-64, frame.size.width, frame.size.height + 128));
+//    CGContextClipToRect(ctx, CGRectMake(frame.origin.x, frame.origin.y, frame.origin.y + frame.size.width, frame.origin.y + frame.size.height));
+    UIBezierPath * path = [UIBezierPath bezierPathWithRect:frame];
+    [path addClip];
     //4、渲染
     [view.layer renderInContext:ctx];
     //5、从上下文中获取
@@ -145,6 +152,28 @@
     NSData * data = UIImagePNGRepresentation(newImage);
     //7、关闭上下文
     UIGraphicsEndImageContext();
+    
+    for (PQWipeView * wipe in view.subviews) {
+        [wipe setHidden:NO];
+    }
+    
+    
+//    //注意上
+    UIGraphicsBeginImageContext(frame.size);
+    
+    
+    
+    UIBezierPath * path1 = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0,100, 100)];
+//    [path1 addClip];
+    
+    [newImage drawAsPatternInRect:CGRectMake(-frame.origin.x, -frame.origin.y, frame.size.width, frame.size.height)];
+    
+    UIImage * nnImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    NSData * nData = UIImageJPEGRepresentation(nnImage, 1);
+    
+    UIGraphicsEndImageContext();
+    
     //8、回调
     block(newImage,data);
 }

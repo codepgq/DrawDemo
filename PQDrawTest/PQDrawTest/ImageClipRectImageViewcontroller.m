@@ -10,9 +10,12 @@
 #import "PQClipView.h"
 #import "UIImage+PQImage.h"
 #import "UIView+pgqViewExtension.h"
+#import "PQWipeView.h"
 @interface ImageClipRectImageViewcontroller ()
 
 @property (nonatomic,strong) PQClipView * clipView;
+
+@property (nonatomic,strong) PQWipeView * wipeView;
 @property (nonatomic,strong) UIImageView * imgView;
 
 @end
@@ -34,48 +37,44 @@
     imgView.image = _image;
     [self.view addSubview:imgView];
     self.imgView = imgView;
+    self.imgView.userInteractionEnabled = YES;
     
-    _clipView = [[[NSBundle mainBundle]loadNibNamed:@"PQClipView" owner:self options:nil] firstObject];
-    [self.view addSubview:_clipView];
+//    _clipView = [[[NSBundle mainBundle]loadNibNamed:@"PQClipView" owner:self options:nil] firstObject];
+//    [self.view addSubview:_clipView];
+
     
+    _wipeView = [[[NSBundle mainBundle]loadNibNamed:@"PQWipeView" owner:self options:nil] firstObject];
+    [self.imgView addSubview:_wipeView];
 }
 
 - (void)cutFinish{
     
-//    [UIImage pq_cutScreenWithView:self.imgView cutFrame:self.clipView.frame successBlock:^(UIImage * _Nullable image, NSData * _Nullable imagedata) {
-//        if (image) {
-//            NSLog(@"截取成功");
-//            NSString * path = [NSString stringWithFormat:@"%@/Documents/cutSome.jpg",NSHomeDirectory()];
-//            
-//            if( [imagedata writeToFile:path atomically:YES]){
-//                NSLog(@"保存成功%@",path);
-//            }
-//            
-//        }
-//    }];
-    
-    NSLog(@"%@",NSStringFromCGSize(self.clipView.size));
-    
-    UIGraphicsBeginImageContext(self.clipView.size);
-    
-    CGPoint point = [self.clipView convertPoint:self.clipView.frame.origin fromView:self.imgView];
-    
-    CGRect rect = CGRectMake(self.clipView.x, self.clipView.y-64, self.clipView.width, self.clipView.height+128);
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextClipToRect(ctx, rect);
-    
-    [self.imgView.layer renderInContext:ctx];
-    
-    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    NSData * data = UIImagePNGRepresentation(newImage);
-    
-    NSString * path = [NSString stringWithFormat:@"%@/Documents/cutSome.png",NSHomeDirectory()];
-    if( [data writeToFile:path atomically:YES]){
-        NSLog(@"保存成功%@",path);
-    }
-    UIGraphicsEndImageContext();
+//    CGPoint point = [self.wipeView convertPoint:self.wipeView.origin toView:self.imgView];
+    CGRect cutFrame = self.wipeView.frame;
+    NSLog(@"%@",NSStringFromCGRect(self.wipeView.frame));
+    [UIImage pq_cutScreenWithView:self.imgView cutFrame:cutFrame successBlock:^(UIImage * _Nullable image, NSData * _Nullable imagedata) {
+        if (image) {
+            NSLog(@"截取成功");
+            NSString * path = [NSString stringWithFormat:@"%@/Documents/cutSome.jpg",NSHomeDirectory()];
+            
+            if( [imagedata writeToFile:path atomically:YES]){
+                NSLog(@"保存成功%@",path);
+            }
+            
+            self.imgView.hidden = YES;
+            
+            UIImageView * imagev = [[UIImageView alloc]initWithImage:image];
+            imagev.backgroundColor = [UIColor redColor];
+            imagev.x = 0;
+            imagev.y = 64;
+            [self.view addSubview:imagev];
+            
+            UIView * vv = [[UIView alloc]initWithFrame:self.wipeView.frame];
+            vv.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+            [self.view addSubview:vv];
+            NSLog(@"%@",NSStringFromCGRect(self.wipeView.frame));
+        }
+    }];
     
 }
 
