@@ -84,6 +84,24 @@
 				<key>controller</key>
 				<string>ImageClipCircleAndBorderViewcontroller</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>对VIew进行截取</string>
+				<key>controller</key>
+				<string>ImageCutViewViewcontroller</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>擦除效果</string>
+				<key>controller</key>
+				<string>ImageWipeViewcontroller</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>自定义大小图片裁剪</string>
+				<key>controller</key>
+				<string>ImageClipRectImageViewcontroller</string>
+			</dict>
 		</array>
 		<key>section</key>
 		<string>图形上下文</string>

@@ -59,4 +59,30 @@
  *  @return <#return value description#>
  */
 + (nullable UIImage *)pq_ClipCircleImageWithImage:(nullable UIImage *)image circleRect:(CGRect)rect borderWidth:(CGFloat)borderW borderColor:(nullable UIColor *)borderColor;
+
+/**
+ *  对View进行截屏
+ *
+ *  @param view
+ */
++ (void)pq_cutScreenWithView:(nullable UIView *)view successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block;
+/**
+ *  对view的某一部分进行裁剪
+ *
+ *  @param view  <#view description#>
+ *  @param frame <#frame description#>
+ *  @param block <#block description#>
+ */
++ (void)pq_cutScreenWithView:(nullable UIView *)view cutFrame:(CGRect)frame successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block;
+
+/**
+ *  传入一个ImageView，添加向下透明区域
+ *
+ *  @param view     <#view description#>
+ *  @param nowPoint <#nowPoint description#>
+ *  @param size     <#size description#>
+ *
+ *  @return <#return value description#>
+ */
+- (nullable UIImage *)pq_wipeImageWithView:(nullable UIView *)view currentPoint:(CGPoint)nowPoint size:(CGSize)size;
 @end

@@ -42,6 +42,15 @@
 		818148731D5EF51700346206 /* DrawLineColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148721D5EF51700346206 /* DrawLineColorView.m */; };
 		818148761D5F272100346206 /* ImageContextViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148751D5F272100346206 /* ImageContextViewcontroller.m */; };
 		818148791D5F273900346206 /* UIImage+PQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 818148781D5F273900346206 /* UIImage+PQImage.m */; };
+		81F45D1D1D61688A00090568 /* ImageCutViewViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F45D1C1D61688A00090568 /* ImageCutViewViewcontroller.m */; };
+		81F45D201D6170EB00090568 /* ImageWipeViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F45D1F1D6170EB00090568 /* ImageWipeViewcontroller.m */; };
+		81F45D241D61717600090568 /* fore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81F45D221D61717600090568 /* fore.jpg */; };
+		81F45D261D61729500090568 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81F45D251D61729500090568 /* back.jpg */; };
+		81FD2D0C1D619F060081C061 /* ImageClipRectImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */; };
+		81FD2D0F1D61A0D80081C061 /* PQClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0E1D61A0D80081C061 /* PQClipView.m */; };
+		81FD2D131D61AD770081C061 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D121D61AD770081C061 /* 16.png */; };
+		81FD2D151D61B0AC0081C061 /* PQClipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D141D61B0AC0081C061 /* PQClipView.xib */; };
+		81FD2D171D61B2240081C061 /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D161D61B2240081C061 /* jiantou.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +139,19 @@
 		818148751D5F272100346206 /* ImageContextViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContextViewcontroller.m; sourceTree = "<group>"; };
 		818148771D5F273900346206 /* UIImage+PQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PQImage.h"; sourceTree = "<group>"; };
 		818148781D5F273900346206 /* UIImage+PQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PQImage.m"; sourceTree = "<group>"; };
+		81F45D1B1D61688A00090568 /* ImageCutViewViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCutViewViewcontroller.h; sourceTree = "<group>"; };
+		81F45D1C1D61688A00090568 /* ImageCutViewViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCutViewViewcontroller.m; sourceTree = "<group>"; };
+		81F45D1E1D6170EB00090568 /* ImageWipeViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWipeViewcontroller.h; sourceTree = "<group>"; };
+		81F45D1F1D6170EB00090568 /* ImageWipeViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWipeViewcontroller.m; sourceTree = "<group>"; };
+		81F45D221D61717600090568 /* fore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fore.jpg; sourceTree = "<group>"; };
+		81F45D251D61729500090568 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		81FD2D0A1D619F060081C061 /* ImageClipRectImageViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageClipRectImageViewcontroller.h; sourceTree = "<group>"; };
+		81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClipRectImageViewcontroller.m; sourceTree = "<group>"; };
+		81FD2D0D1D61A0D80081C061 /* PQClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQClipView.h; sourceTree = "<group>"; };
+		81FD2D0E1D61A0D80081C061 /* PQClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQClipView.m; sourceTree = "<group>"; };
+		81FD2D121D61AD770081C061 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		81FD2D141D61B0AC0081C061 /* PQClipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PQClipView.xib; sourceTree = "<group>"; };
+		81FD2D161D61B2240081C061 /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +283,10 @@
 		818148321D5EAF3000346206 /* ImageContext */ = {
 			isa = PBXGroup;
 			children = (
+				81FD2D161D61B2240081C061 /* jiantou.png */,
+				81FD2D121D61AD770081C061 /* 16.png */,
+				81F45D251D61729500090568 /* back.jpg */,
+				81F45D221D61717600090568 /* fore.jpg */,
 				818148741D5F272100346206 /* ImageContextViewcontroller.h */,
 				818148751D5F272100346206 /* ImageContextViewcontroller.m */,
 				818148771D5F273900346206 /* UIImage+PQImage.h */,
@@ -273,6 +299,15 @@
 				813E6A6E1D6150200032C575 /* ImageClipCircleViewcontroller.m */,
 				813E6A701D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.h */,
 				813E6A711D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m */,
+				81F45D1B1D61688A00090568 /* ImageCutViewViewcontroller.h */,
+				81F45D1C1D61688A00090568 /* ImageCutViewViewcontroller.m */,
+				81F45D1E1D6170EB00090568 /* ImageWipeViewcontroller.h */,
+				81F45D1F1D6170EB00090568 /* ImageWipeViewcontroller.m */,
+				81FD2D0A1D619F060081C061 /* ImageClipRectImageViewcontroller.h */,
+				81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */,
+				81FD2D0D1D61A0D80081C061 /* PQClipView.h */,
+				81FD2D0E1D61A0D80081C061 /* PQClipView.m */,
+				81FD2D141D61B0AC0081C061 /* PQClipView.xib */,
 			);
 			name = ImageContext;
 			sourceTree = "<group>";
@@ -430,11 +465,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81FD2D131D61AD770081C061 /* 16.png in Resources */,
+				81F45D241D61717600090568 /* fore.jpg in Resources */,
+				81FD2D171D61B2240081C061 /* jiantou.png in Resources */,
 				818148071D5EAC5E00346206 /* LaunchScreen.storyboard in Resources */,
 				818148671D5EF25700346206 /* 222.png in Resources */,
 				818148041D5EAC5E00346206 /* Assets.xcassets in Resources */,
 				818148301D5EACE100346206 /* Draw.plist in Resources */,
+				81F45D261D61729500090568 /* back.jpg in Resources */,
 				818148021D5EAC5E00346206 /* Main.storyboard in Resources */,
+				81FD2D151D61B0AC0081C061 /* PQClipView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,13 +504,16 @@
 				818148761D5F272100346206 /* ImageContextViewcontroller.m in Sources */,
 				8181482E1D5EACB900346206 /* PQTBDataSource.m in Sources */,
 				813E6A721D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m in Sources */,
+				81F45D201D6170EB00090568 /* ImageWipeViewcontroller.m in Sources */,
 				813E6A6F1D6150200032C575 /* ImageClipCircleViewcontroller.m in Sources */,
 				818148791D5F273900346206 /* UIImage+PQImage.m in Sources */,
 				818148701D5EF50800346206 /* DrawDownloadView.m in Sources */,
 				818148411D5EAFAA00346206 /* DrawImageViewcontroller.m in Sources */,
 				818148551D5EB0C600346206 /* DrawTexttView.m in Sources */,
+				81FD2D0F1D61A0D80081C061 /* PQClipView.m in Sources */,
 				818148731D5EF51700346206 /* DrawLineColorView.m in Sources */,
 				813E6A6C1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m in Sources */,
+				81F45D1D1D61688A00090568 /* ImageCutViewViewcontroller.m in Sources */,
 				818148581D5EB0D600346206 /* DrawImageView.m in Sources */,
 				818148381D5EAF7B00346206 /* DrawRectViewcontroller.m in Sources */,
 				8181484C1D5EB0A400346206 /* DrawLineView.m in Sources */,
@@ -478,6 +521,7 @@
 				818148601D5EB34A00346206 /* CellModel.m in Sources */,
 				818148351D5EAF6F00346206 /* DrawLineViewcontroller.m in Sources */,
 				813E6A691D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m in Sources */,
+				81FD2D0C1D619F060081C061 /* ImageClipRectImageViewcontroller.m in Sources */,
 				818148521D5EB0BD00346206 /* DrawCircletView.m in Sources */,
 				818148651D5EBAD700346206 /* PQTBDelegate.m in Sources */,
 				8181483E1D5EAF9A00346206 /* DrawTextViewcontroller.m in Sources */,
