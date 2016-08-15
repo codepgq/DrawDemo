@@ -33,7 +33,6 @@
     
     CGFloat startA = - M_PI_2;
     CGFloat endA =  - M_PI_2 + self.progress * M_PI * 2;
-    NSLog(@"%f - %f - %f",self.progress,(3.14159265359*self.progress)/180,endA);
     UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width*0.5, self.bounds.size.height*0.5) radius:self.bounds.size.width*0.5-10 startAngle:startA endAngle:endA clockwise:YES];
     [[UIColor colorWithRed:self.progress green:(1-self.progress) blue:0 alpha:1]setStroke];
     path.lineWidth = 5;

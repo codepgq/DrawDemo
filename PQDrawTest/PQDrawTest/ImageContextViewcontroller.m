@@ -7,7 +7,7 @@
 //
 
 #import "ImageContextViewcontroller.h"
-
+#import "UIImage+PQImage.h"
 @interface ImageContextViewcontroller ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 200, 200)];
+    imageView.image = [UIImage pq_drawImageWithImageNamed:@"222.png"];
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning {

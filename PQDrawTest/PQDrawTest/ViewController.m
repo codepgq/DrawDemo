@@ -46,12 +46,13 @@ static NSString * const Identifier = @"cell";
     self.delegate = [[PQTBDelegate alloc]initWithdelegate:self.array identifier:Identifier cellSelectedBlock:^(id  _Nullable cell, id  _Nullable item) {
         if ([[item controller] isEqualToString:@"DrawDownloadViewController"]) {
             DrawDownloadViewcontroller * download = [DrawDownloadViewcontroller loadForStoryboard];
-            [self addChildViewController:download];
             [self.navigationController pushViewController:download animated:YES];
         }
-        Class cls = NSClassFromString([item controller]);
-        
-        [self.navigationController pushViewController:[[cls alloc] init] animated:YES];
+        else{
+            Class cls = NSClassFromString([item controller]);
+            
+            [self.navigationController pushViewController:[[cls alloc] init] animated:YES];
+        }
     }];
     self.myTableView.delegate = self.delegate;
 }

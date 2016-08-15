@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813E6A691D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A681D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m */; };
+		813E6A6C1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A6B1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m */; };
+		813E6A6F1D6150200032C575 /* ImageClipCircleViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A6E1D6150200032C575 /* ImageClipCircleViewcontroller.m */; };
+		813E6A721D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 813E6A711D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m */; };
 		818147F91D5EAC5E00346206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 818147F81D5EAC5E00346206 /* main.m */; };
 		818147FC1D5EAC5E00346206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 818147FB1D5EAC5E00346206 /* AppDelegate.m */; };
 		818147FF1D5EAC5E00346206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818147FE1D5EAC5E00346206 /* ViewController.m */; };
@@ -58,6 +62,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		813E6A671D614FAB0032C575 /* ImageAddWaterImageViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddWaterImageViewcontroller.h; sourceTree = "<group>"; };
+		813E6A681D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAddWaterImageViewcontroller.m; sourceTree = "<group>"; };
+		813E6A6A1D614FE60032C575 /* ImageAddWaterTextViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddWaterTextViewcontroller.h; sourceTree = "<group>"; };
+		813E6A6B1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAddWaterTextViewcontroller.m; sourceTree = "<group>"; };
+		813E6A6D1D6150200032C575 /* ImageClipCircleViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageClipCircleViewcontroller.h; sourceTree = "<group>"; };
+		813E6A6E1D6150200032C575 /* ImageClipCircleViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClipCircleViewcontroller.m; sourceTree = "<group>"; };
+		813E6A701D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageClipCircleAndBorderViewcontroller.h; sourceTree = "<group>"; };
+		813E6A711D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClipCircleAndBorderViewcontroller.m; sourceTree = "<group>"; };
 		818147F41D5EAC5E00346206 /* PQDrawTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PQDrawTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		818147F81D5EAC5E00346206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		818147FA1D5EAC5E00346206 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -253,6 +265,14 @@
 				818148751D5F272100346206 /* ImageContextViewcontroller.m */,
 				818148771D5F273900346206 /* UIImage+PQImage.h */,
 				818148781D5F273900346206 /* UIImage+PQImage.m */,
+				813E6A671D614FAB0032C575 /* ImageAddWaterImageViewcontroller.h */,
+				813E6A681D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m */,
+				813E6A6A1D614FE60032C575 /* ImageAddWaterTextViewcontroller.h */,
+				813E6A6B1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m */,
+				813E6A6D1D6150200032C575 /* ImageClipCircleViewcontroller.h */,
+				813E6A6E1D6150200032C575 /* ImageClipCircleViewcontroller.m */,
+				813E6A701D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.h */,
+				813E6A711D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m */,
 			);
 			name = ImageContext;
 			sourceTree = "<group>";
@@ -443,17 +463,21 @@
 				818147FF1D5EAC5E00346206 /* ViewController.m in Sources */,
 				818148761D5F272100346206 /* ImageContextViewcontroller.m in Sources */,
 				8181482E1D5EACB900346206 /* PQTBDataSource.m in Sources */,
+				813E6A721D6150510032C575 /* ImageClipCircleAndBorderViewcontroller.m in Sources */,
+				813E6A6F1D6150200032C575 /* ImageClipCircleViewcontroller.m in Sources */,
 				818148791D5F273900346206 /* UIImage+PQImage.m in Sources */,
 				818148701D5EF50800346206 /* DrawDownloadView.m in Sources */,
 				818148411D5EAFAA00346206 /* DrawImageViewcontroller.m in Sources */,
 				818148551D5EB0C600346206 /* DrawTexttView.m in Sources */,
 				818148731D5EF51700346206 /* DrawLineColorView.m in Sources */,
+				813E6A6C1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m in Sources */,
 				818148581D5EB0D600346206 /* DrawImageView.m in Sources */,
 				818148381D5EAF7B00346206 /* DrawRectViewcontroller.m in Sources */,
 				8181484C1D5EB0A400346206 /* DrawLineView.m in Sources */,
 				8181483B1D5EAF8D00346206 /* DrawCircleViewcontroller.m in Sources */,
 				818148601D5EB34A00346206 /* CellModel.m in Sources */,
 				818148351D5EAF6F00346206 /* DrawLineViewcontroller.m in Sources */,
+				813E6A691D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m in Sources */,
 				818148521D5EB0BD00346206 /* DrawCircletView.m in Sources */,
 				818148651D5EBAD700346206 /* PQTBDelegate.m in Sources */,
 				8181483E1D5EAF9A00346206 /* DrawTextViewcontroller.m in Sources */,
@@ -688,6 +712,7 @@
 				818148231D5EAC5E00346206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818148241D5EAC5E00346206 /* Build configuration list for PBXNativeTarget "PQDrawTestTests" */ = {
 			isa = XCConfigurationList;
@@ -696,6 +721,7 @@
 				818148261D5EAC5E00346206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		818148271D5EAC5E00346206 /* Build configuration list for PBXNativeTarget "PQDrawTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +730,7 @@
 				818148291D5EAC5E00346206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

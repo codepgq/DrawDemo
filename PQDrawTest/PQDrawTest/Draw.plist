@@ -62,27 +62,27 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>画矩形</string>
+				<string>给图片添加文字水印</string>
 				<key>controller</key>
-				<string>DrawRectViewcontroller</string>
+				<string>ImageAddWaterTextViewcontroller</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>画圆形</string>
+				<string>给图片添加图片水印</string>
 				<key>controller</key>
-				<string>DrawCircleViewcontroller</string>
+				<string>ImageAddWaterImageViewcontroller</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>画文字</string>
+				<string>裁剪圆形图片</string>
 				<key>controller</key>
-				<string>DrawTextViewcontroller</string>
+				<string>ImageClipCircleViewcontroller</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>画图片</string>
+				<string>裁剪圆形带边框图片</string>
 				<key>controller</key>
-				<string>DrawImageViewcontroller</string>
+				<string>ImageClipCircleAndBorderViewcontroller</string>
 			</dict>
 		</array>
 		<key>section</key>
