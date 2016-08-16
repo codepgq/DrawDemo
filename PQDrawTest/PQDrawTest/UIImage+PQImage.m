@@ -137,7 +137,7 @@
     }
     
     //1.开启上下文
-    UIGraphicsBeginImageContext(view.frame.size);
+    UIGraphicsBeginImageContext(frame.size);
     //2、获取当前的上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     //3、添加裁剪区域 因为一开始view+了64所以这里有要减去
@@ -149,7 +149,7 @@
     //5、从上下文中获取
     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
     //6、得到data
-    NSData * data = UIImagePNGRepresentation(newImage);
+    NSData * data = UIImageJPEGRepresentation(newImage, 1);
     //7、关闭上下文
     UIGraphicsEndImageContext();
     
@@ -158,15 +158,21 @@
     }
     
     
+    NSLog(@"%@",NSStringFromCGSize(CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y)));
+    
+    CGSize newSize = CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y);
+    
 //    //注意上
-    UIGraphicsBeginImageContext(frame.size);
+//    UIGraphicsBeginImageContext(CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y));
+
+//    UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0);
     
     
     
-    UIBezierPath * path1 = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0,100, 100)];
+    UIBezierPath * path1 = [UIBezierPath bezierPathWithRect:frame];
 //    [path1 addClip];
     
-    [newImage drawAsPatternInRect:CGRectMake(-frame.origin.x, -frame.origin.y, frame.size.width, frame.size.height)];
+    [newImage drawAsPatternInRect:CGRectMake(0, 0, frame.size.width, frame.size.height)];
     
     UIImage * nnImage = UIGraphicsGetImageFromCurrentImageContext();
     
@@ -175,7 +181,7 @@
     UIGraphicsEndImageContext();
     
     //8、回调
-    block(newImage,data);
+    block(newImage,nData);
 }
 
 - (nullable UIImage *)pq_wipeImageWithView:(nullable UIView *)view currentPoint:(CGPoint)nowPoint size:(CGSize)size{
