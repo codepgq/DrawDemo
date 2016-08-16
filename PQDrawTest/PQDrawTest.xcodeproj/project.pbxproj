@@ -49,7 +49,6 @@
 		81F45D241D61717600090568 /* fore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81F45D221D61717600090568 /* fore.jpg */; };
 		81F45D261D61729500090568 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81F45D251D61729500090568 /* back.jpg */; };
 		81FD2D0C1D619F060081C061 /* ImageClipRectImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */; };
-		81FD2D0F1D61A0D80081C061 /* PQClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0E1D61A0D80081C061 /* PQClipView.m */; };
 		81FD2D131D61AD770081C061 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D121D61AD770081C061 /* 16.png */; };
 		81FD2D171D61B2240081C061 /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D161D61B2240081C061 /* jiantou.png */; };
 /* End PBXBuildFile section */
@@ -151,8 +150,6 @@
 		81F45D251D61729500090568 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		81FD2D0A1D619F060081C061 /* ImageClipRectImageViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageClipRectImageViewcontroller.h; sourceTree = "<group>"; };
 		81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClipRectImageViewcontroller.m; sourceTree = "<group>"; };
-		81FD2D0D1D61A0D80081C061 /* PQClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQClipView.h; sourceTree = "<group>"; };
-		81FD2D0E1D61A0D80081C061 /* PQClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQClipView.m; sourceTree = "<group>"; };
 		81FD2D121D61AD770081C061 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		81FD2D161D61B2240081C061 /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,8 +305,6 @@
 				81F45D1F1D6170EB00090568 /* ImageWipeViewcontroller.m */,
 				81FD2D0A1D619F060081C061 /* ImageClipRectImageViewcontroller.h */,
 				81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */,
-				81FD2D0D1D61A0D80081C061 /* PQClipView.h */,
-				81FD2D0E1D61A0D80081C061 /* PQClipView.m */,
 				60FB925E1D61E94600CBAFDD /* PQWipeView.h */,
 				60FB925F1D61E94600CBAFDD /* PQWipeView.m */,
 				60FB92611D61E9FD00CBAFDD /* PQWipeView.xib */,
@@ -515,7 +510,6 @@
 				818148701D5EF50800346206 /* DrawDownloadView.m in Sources */,
 				818148411D5EAFAA00346206 /* DrawImageViewcontroller.m in Sources */,
 				818148551D5EB0C600346206 /* DrawTexttView.m in Sources */,
-				81FD2D0F1D61A0D80081C061 /* PQClipView.m in Sources */,
 				818148731D5EF51700346206 /* DrawLineColorView.m in Sources */,
 				813E6A6C1D614FE60032C575 /* ImageAddWaterTextViewcontroller.m in Sources */,
 				81F45D1D1D61688A00090568 /* ImageCutViewViewcontroller.m in Sources */,

@@ -30,10 +30,8 @@
     switch (sender.state) {
         case UIGestureRecognizerStateBegan:
             _sizeStartP = [sender locationInView:self];
-//            NSLog(@"%@",NSStringFromCGPoint(_sizeStartP));
             oldSize = self.size;
             break;
-            
             
     case UIGestureRecognizerStateChanged:
         {
@@ -57,19 +55,19 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];
-    
+    //得到按下去的点
     _startP = [touch locationInView:self];
-    
-//    NSLog(@"%@",NSStringFromCGPoint(_startP));
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];
     
     CGPoint curP = [touch locationInView:self];
-    
+    //计算偏移量
     CGFloat x = curP.x - _startP.x;
     CGFloat y = curP.y - _startP.y;
+    
+    //限制范围 不允许超出屏幕
     
     self.x += x;
     if (self.x <=0) {
@@ -79,10 +77,8 @@
     if (self.y <= 0) {
         self.y = 0;
     }
-    
+    //范围判断
     [self ifOut];
-    
-//    NSLog(@"%f %f",self.x,self.y);
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

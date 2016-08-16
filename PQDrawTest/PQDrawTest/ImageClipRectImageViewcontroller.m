@@ -7,13 +7,10 @@
 //
 
 #import "ImageClipRectImageViewcontroller.h"
-#import "PQClipView.h"
 #import "UIImage+PQImage.h"
 #import "UIView+pgqViewExtension.h"
 #import "PQWipeView.h"
 @interface ImageClipRectImageViewcontroller ()
-
-@property (nonatomic,strong) PQClipView * clipView;
 
 @property (nonatomic,strong) PQWipeView * wipeView;
 @property (nonatomic,strong) UIImageView * imgView;
@@ -39,20 +36,13 @@
     self.imgView = imgView;
     self.imgView.userInteractionEnabled = YES;
     
-//    _clipView = [[[NSBundle mainBundle]loadNibNamed:@"PQClipView" owner:self options:nil] firstObject];
-//    [self.view addSubview:_clipView];
-
-    
     _wipeView = [[[NSBundle mainBundle]loadNibNamed:@"PQWipeView" owner:self options:nil] firstObject];
     [self.imgView addSubview:_wipeView];
 }
 
 - (void)cutFinish{
     
-//    CGPoint point = [self.wipeView convertPoint:self.wipeView.origin toView:self.imgView];
-    CGRect cutFrame = self.wipeView.frame;
-    NSLog(@"%@",NSStringFromCGRect(self.wipeView.frame));
-    [UIImage pq_cutScreenWithView:self.imgView cutFrame:cutFrame successBlock:^(UIImage * _Nullable image, NSData * _Nullable imagedata) {
+    [UIImage pq_cutScreenWithView:self.imgView cutFrame:self.wipeView.frame successBlock:^(UIImage * _Nullable image, NSData * _Nullable imagedata) {
         if (image) {
             NSLog(@"截取成功");
             NSString * path = [NSString stringWithFormat:@"%@/Documents/cutSome.jpg",NSHomeDirectory()];
@@ -64,15 +54,9 @@
             self.imgView.hidden = YES;
             
             UIImageView * imagev = [[UIImageView alloc]initWithImage:image];
-            imagev.backgroundColor = [UIColor redColor];
             imagev.x = 0;
             imagev.y = 64;
             [self.view addSubview:imagev];
-            
-            UIView * vv = [[UIView alloc]initWithFrame:self.wipeView.frame];
-            vv.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-            [self.view addSubview:vv];
-            NSLog(@"%@",NSStringFromCGRect(self.wipeView.frame));
         }
     }];
     

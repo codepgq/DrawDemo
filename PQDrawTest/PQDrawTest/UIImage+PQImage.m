@@ -130,58 +130,50 @@
     block(newImage,data);
 }
 
-+ (void)pq_cutScreenWithView:(UIView *)view cutFrame:(CGRect)frame successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block{
++ (void)pq_cutScreenWithView:(nullable UIView *)view cutFrame:(CGRect)frame successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block{
     
+    //先把裁剪区域上面显示的层隐藏掉
     for (PQWipeView * wipe in view.subviews) {
         [wipe setHidden:YES];
     }
     
+    
+    // ************************   进行第一次裁剪 ********************
+    
     //1.开启上下文
-    UIGraphicsBeginImageContext(frame.size);
+    UIGraphicsBeginImageContext(view.frame.size);
     //2、获取当前的上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    //3、添加裁剪区域 因为一开始view+了64所以这里有要减去
-//    CGContextClipToRect(ctx, CGRectMake(frame.origin.x, frame.origin.y, frame.origin.y + frame.size.width, frame.origin.y + frame.size.height));
+    //3、添加裁剪区域
     UIBezierPath * path = [UIBezierPath bezierPathWithRect:frame];
     [path addClip];
     //4、渲染
     [view.layer renderInContext:ctx];
     //5、从上下文中获取
     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    //6、得到data
-    NSData * data = UIImageJPEGRepresentation(newImage, 1);
     //7、关闭上下文
     UIGraphicsEndImageContext();
     
+    //8、进行完第一次裁剪之后，我们就已经拿到了没有半透明层的图片，这个时候可以恢复显示
     for (PQWipeView * wipe in view.subviews) {
         [wipe setHidden:NO];
     }
     
+    // ************************   进行第二次裁剪 ********************
+    //9、开启上下文，这个时候的大小就是我们最终要显示图片的大小
+    UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0);
     
-    NSLog(@"%@",NSStringFromCGSize(CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y)));
+    //10、这里把x y 坐标向左、上移动
+    [newImage drawAtPoint:CGPointMake(- frame.origin.x, - frame.origin.y)];
     
-    CGSize newSize = CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y);
-    
-//    //注意上
-//    UIGraphicsBeginImageContext(CGSizeMake(frame.size.width - frame.origin.x,  frame.size.height -frame.origin.y));
-
-//    UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0);
-    
-    
-    
-    UIBezierPath * path1 = [UIBezierPath bezierPathWithRect:frame];
-//    [path1 addClip];
-    
-    [newImage drawAsPatternInRect:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-    
-    UIImage * nnImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    NSData * nData = UIImageJPEGRepresentation(nnImage, 1);
-    
+    //11、得到要显示区域的图片
+    UIImage * fImage = UIGraphicsGetImageFromCurrentImageContext();
+    //12、得到data类型 便于保存
+    NSData * data2 = UIImageJPEGRepresentation(fImage, 1);
+    //13、关闭上下文
     UIGraphicsEndImageContext();
-    
-    //8、回调
-    block(newImage,nData);
+    //14、回调
+    block(fImage,data2);
 }
 
 - (nullable UIImage *)pq_wipeImageWithView:(nullable UIView *)view currentPoint:(CGPoint)nowPoint size:(CGSize)size{
