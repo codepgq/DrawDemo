@@ -16,6 +16,10 @@
 
 @implementation DrawDownloadView
 
+- (void)awakeFromNib{
+    self.backgroundColor = [UIColor clearColor];
+}
+
 - (void)setProgress:(CGFloat)progress{
     _progress = progress;
     
