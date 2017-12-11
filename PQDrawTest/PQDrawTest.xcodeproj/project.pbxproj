@@ -51,6 +51,8 @@
 		81FD2D0C1D619F060081C061 /* ImageClipRectImageViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */; };
 		81FD2D131D61AD770081C061 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D121D61AD770081C061 /* 16.png */; };
 		81FD2D171D61B2240081C061 /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FD2D161D61B2240081C061 /* jiantou.png */; };
+		8FE387251FDE1F0300A15F5C /* DrawGradientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE387241FDE1F0300A15F5C /* DrawGradientController.m */; };
+		8FE387281FDE1F5600A15F5C /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE387271FDE1F5600A15F5C /* LineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,10 @@
 		81FD2D0B1D619F060081C061 /* ImageClipRectImageViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageClipRectImageViewcontroller.m; sourceTree = "<group>"; };
 		81FD2D121D61AD770081C061 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		81FD2D161D61B2240081C061 /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
+		8FE387231FDE1F0300A15F5C /* DrawGradientController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawGradientController.h; sourceTree = "<group>"; };
+		8FE387241FDE1F0300A15F5C /* DrawGradientController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawGradientController.m; sourceTree = "<group>"; };
+		8FE387261FDE1F5600A15F5C /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		8FE387271FDE1F5600A15F5C /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +282,8 @@
 				818148691D5EF49000346206 /* DrawLineColorViewcontroller.m */,
 				8181486B1D5EF4A400346206 /* DrawDownloadViewcontroller.h */,
 				8181486C1D5EF4A400346206 /* DrawDownloadViewcontroller.m */,
+				8FE387231FDE1F0300A15F5C /* DrawGradientController.h */,
+				8FE387241FDE1F0300A15F5C /* DrawGradientController.m */,
 			);
 			name = Draw;
 			sourceTree = "<group>";
@@ -324,6 +332,8 @@
 		818148491D5EB09400346206 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				8FE387261FDE1F5600A15F5C /* LineView.h */,
+				8FE387271FDE1F5600A15F5C /* LineView.m */,
 				8181484A1D5EB0A400346206 /* DrawLineView.h */,
 				8181484B1D5EB0A400346206 /* DrawLineView.m */,
 				8181484D1D5EB0B200346206 /* DrawRectView.h */,
@@ -429,6 +439,7 @@
 				TargetAttributes = {
 					818147F31D5EAC5E00346206 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = B2BXA8AH8F;
 					};
 					8181480C1D5EAC5E00346206 = {
 						CreatedOnToolsVersion = 7.3;
@@ -517,6 +528,7 @@
 				818148381D5EAF7B00346206 /* DrawRectViewcontroller.m in Sources */,
 				8181484C1D5EB0A400346206 /* DrawLineView.m in Sources */,
 				8181483B1D5EAF8D00346206 /* DrawCircleViewcontroller.m in Sources */,
+				8FE387251FDE1F0300A15F5C /* DrawGradientController.m in Sources */,
 				818148601D5EB34A00346206 /* CellModel.m in Sources */,
 				818148351D5EAF6F00346206 /* DrawLineViewcontroller.m in Sources */,
 				813E6A691D614FAB0032C575 /* ImageAddWaterImageViewcontroller.m in Sources */,
@@ -526,6 +538,7 @@
 				8181483E1D5EAF9A00346206 /* DrawTextViewcontroller.m in Sources */,
 				8181484F1D5EB0B200346206 /* DrawRectView.m in Sources */,
 				818147FC1D5EAC5E00346206 /* AppDelegate.m in Sources */,
+				8FE387281FDE1F5600A15F5C /* LineView.m in Sources */,
 				60FB92601D61E94600CBAFDD /* PQWipeView.m in Sources */,
 				818147F91D5EAC5E00346206 /* main.m in Sources */,
 				8181486A1D5EF49000346206 /* DrawLineColorViewcontroller.m in Sources */,
@@ -673,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2BXA8AH8F;
 				INFOPLIST_FILE = PQDrawTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -685,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2BXA8AH8F;
 				INFOPLIST_FILE = PQDrawTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

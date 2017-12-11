@@ -47,6 +47,12 @@
 				<key>controller</key>
 				<string>DrawLineColorViewcontroller</string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>绘制渐变色</string>
+				<key>controller</key>
+				<string>DrawGradientController</string>
+			</dict>
 		</array>
 		<key>section</key>
 		<string>Draw</string>

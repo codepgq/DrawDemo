@@ -57,10 +57,4 @@ static NSString * const Identifier = @"cell";
     self.myTableView.delegate = self.delegate;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 @end
